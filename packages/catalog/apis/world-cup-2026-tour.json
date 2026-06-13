@@ -1,0 +1,37 @@
+{
+  "id": "world-cup-2026-tour",
+  "name": "World Cup 2026 Tour",
+  "description": "Free no-auth API for all 104 World Cup 2026 fixtures, local kickoff time conversion, match links, CSV, JSONL, RSS, calendar feeds, and OpenAPI docs.",
+  "category": "sports-fitness",
+  "difficulty": "beginner",
+  "baseUrl": "https://ay-worldcup2026.zeabur.app/api/public/v1",
+  "documentationUrl": "https://ay-worldcup2026.zeabur.app/developers",
+  "auth": { "required": false, "type": "none" },
+  "endpoints": [
+    {
+      "path": "/metadata",
+      "method": "GET",
+      "description": "Return API metadata, dataset links, OpenAPI URL, and public feed links"
+    },
+    {
+      "path": "/matches?timezone=America/New_York",
+      "method": "GET",
+      "description": "List all fixtures with kickoff times converted to a requested IANA time zone"
+    },
+    {
+      "path": "/matches/{id}",
+      "method": "GET",
+      "description": "Return one World Cup 2026 match by id"
+    },
+    {
+      "path": "/next?timezone=Europe/London",
+      "method": "GET",
+      "description": "Return the next upcoming fixture for a requested time zone"
+    }
+  ],
+  "tags": ["world-cup", "football", "soccer", "fixtures", "calendar", "openapi"],
+  "cors": "yes",
+  "https": true,
+  "pricing": "free",
+  "addedAt": "2026-06-13"
+}
